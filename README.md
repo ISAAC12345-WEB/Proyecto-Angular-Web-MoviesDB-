@@ -13,7 +13,7 @@ Ejecute `ngserve` para un servidor de desarrollo. Navegue hasta `http://localhos
 
 ## Andamio de código
 
-Ejecute `ng generate componente nombre-componente` para generar un nuevo componente. También puede usar `ng generar directiva|tubería|servicio|clase|guardia|interfaz|enum|módulo`.
+Ejecute `ng generate component component-name` para generar un nuevo componente. También puede usar `ng generar directiva|tubería|servicio|clase|guardia|interfaz|enum|módulo`.
 
 ## Construir
 
