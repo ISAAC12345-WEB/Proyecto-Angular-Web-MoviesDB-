@@ -4,7 +4,8 @@ Este proyecto se generó con [Angular CLI](https://github.com/angular/angular-cl
 
 ## MovieDB
 
-Aqui esta el link de [MOVIE - DB](https://www.themoviedb.org/) primero se debera registarse al sitio web y crear una api_key.  
+Aqui esta el link de [MOVIE - DB](https://www.themoviedb.org/) primero se debera registarse al sitio web y crear una api_key. 
+Tambien aqui la pagina [API - REFERENCE](https://developer.themoviedb.org/reference/intro/getting-started)
 
 ## Servidor de desarrollo
 
