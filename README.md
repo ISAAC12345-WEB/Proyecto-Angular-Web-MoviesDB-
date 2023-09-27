@@ -9,7 +9,8 @@ Tambien aqui la pagina [API - REFERENCE](https://developer.themoviedb.org/refere
 
 ## Servidor de desarrollo
 
-Ejecute `ngserve` para un servidor de desarrollo. Navegue hasta `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos fuente.
+Ejecute `ngserve` para un servidor de desarrollo. Navegue hasta `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos fuente. 
+Estoy haciendo haciendo cambios y implementacion de nuevas cosas.
 
 ## Andamio de código
 
