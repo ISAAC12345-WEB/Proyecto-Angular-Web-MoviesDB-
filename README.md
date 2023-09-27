@@ -8,7 +8,7 @@ Aqui esta el link de [MOVIE - DB](https://www.themoviedb.org/) primero se debera
 Tambien aqui la pagina [API - REFERENCE](https://developer.themoviedb.org/reference/intro/getting-started).
 
 ## Funcionamiento
-
+-> Estoy haciendo haciendo cambios y implementacion de nuevas cosas.
 La aplicación nos permitirá buscar y mostrar títulos con los siguientes criterios:
 - Título
 - Título original
@@ -26,7 +26,6 @@ La aplicación nos permitirá mostrar información de un título.
 ## Servidor de desarrollo
 
 Ejecute `ngserve` para un servidor de desarrollo. Navegue hasta `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos fuente. 
-Estoy haciendo haciendo cambios y implementacion de nuevas cosas.
 
 ## Andamio de código
 
