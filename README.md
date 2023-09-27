@@ -5,7 +5,23 @@ Este proyecto se generó con [Angular CLI](https://github.com/angular/angular-cl
 ## MovieDB
 
 Aqui esta el link de [MOVIE - DB](https://www.themoviedb.org/) primero se debera registarse al sitio web y crear una api_key. 
-Tambien aqui la pagina [API - REFERENCE](https://developer.themoviedb.org/reference/intro/getting-started)
+Tambien aqui la pagina [API - REFERENCE](https://developer.themoviedb.org/reference/intro/getting-started).
+
+## Funcionamiento
+
+La aplicación nos permitirá buscar y mostrar títulos con los siguientes criterios:
+- Título
+- Título original
+- Overview
+- Listar 10 más populares
+- Género (Extra)
+La aplicación nos permitirá mostrar información de un título.
+- Poster
+- Título, título original
+- Fecha de lanzamiento
+- Overview
+- Género (Extra)
+- Número de votos (Extra)
 
 ## Servidor de desarrollo
 
