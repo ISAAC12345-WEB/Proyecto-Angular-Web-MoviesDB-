@@ -8,7 +8,7 @@ Aqui esta el link de [MOVIE - DB](https://www.themoviedb.org/) primero se debera
 Tambien aqui la pagina [API - REFERENCE](https://developer.themoviedb.org/reference/intro/getting-started).
 
 ## Funcionamiento
--> Estoy haciendo haciendo cambios y implementacion de nuevas cosas.
+-> Estoy haciendo cambios e implementacion de nuevas cosas.
 La aplicación nos permitirá buscar y mostrar títulos con los siguientes criterios:
 - Título
 - Título original
