@@ -1,4 +1,4 @@
-# Proyecto001
+# Proyecto 1 - Angular
 
 Este proyecto se generó con [Angular CLI](https://github.com/angular/angular-cli) versión 16.2.1.
 
