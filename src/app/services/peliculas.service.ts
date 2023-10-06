@@ -13,6 +13,7 @@ export class PeliculasService {
   private serverURL:String = 'https://api.themoviedb.org/3';
   private pelisPages = 1;
   cargando: any;
+  getDetallesPelicula: any;
   constructor(private http: HttpClient) { }
 
   get params(){
@@ -33,7 +34,6 @@ export class PeliculasService {
       ))
     );
 
-  
   }
   buscarPeliculas(texto:string):Observable<Movie[]>{
 

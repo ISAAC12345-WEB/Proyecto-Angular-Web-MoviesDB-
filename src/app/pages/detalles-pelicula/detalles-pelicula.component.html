@@ -1,0 +1,11 @@
+<div *ngIf="peliculaDetalles">
+    <h1>{{ peliculaDetalles.title }}</h1>
+    <img [src]="peliculaDetalles.poster_path" alt="Póster de la película">
+    <!-- Otras propiedades de la película -->
+    <p>DESCRIPCION : {{peliculaDetalles.overview}}</p>
+    <p>FECHA DE ESTRENO : {{peliculaDetalles.release_date}}</p>
+    <p>POPULARIDAD: {{peliculaDetalles.popularity}}</p>
+    <p>NUMERO DE VOTOS : {{peliculaDetalles.vote_count}} </p>
+  </div>
+
+<p>detalles-pelicula works!</p>

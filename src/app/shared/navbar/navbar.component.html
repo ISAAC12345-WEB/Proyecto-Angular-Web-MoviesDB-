@@ -6,17 +6,14 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        
-      
+    
       </ul>
       <div class="f-flex">
          <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" 
-        #txtBuscar
-        (keyup.enter)="buscarPelicula(txtBuscar.value)"
-        type="search" placeholder="Buscar..." aria-label="Search">
+        <input class="form-control mr-sm-2" #txtBuscar
+        (keyup.enter)="buscarPelicula(txtBuscar.value)" type="search" placeholder="Escriba aqui.." aria-label="Search">
         
-        <button (click)="buscarPelicula(txtBuscar.value)" class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
+        <button (click)="buscarPelicula(txtBuscar.value)" class="btn btn-success" type="submit">MOSTRAR</button>
       </form>
       </div>
 

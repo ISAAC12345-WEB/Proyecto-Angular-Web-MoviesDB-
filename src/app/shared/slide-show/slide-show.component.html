@@ -5,14 +5,16 @@
                   'background-image':'url(https://image.tmdb.org/t/p/w500'+ movie.backdrop_path +')'
                 }">
               <div class="movie-description">
-                <h3>{{movie.title}} </h3>
-                <h5>{{movie.original_title}} </h5>
-                <button class="btn btn-outline-light btn-sm" (click)="onMovieClick(movie)">Ver Pelicula</button>
+                <h3 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">{{movie.title}} </h3>
+                <h2>{{movie.original_title}} </h2>
                 <p>DESCRIPCION : {{movie.overview}}</p>
                 <p>FECHA DE ESTRENO : {{movie.release_date}}</p>
                 <p>POPULARIDAD: {{movie.popularity}}</p>
                 <p>NUMERO DE VOTOS : {{movie.vote_count}} </p>
+                <button class="btn btn-dark btn-sm" (click)="onMovieClick(movie)">VER TODAS LAS PELICULAS</button>
               </div>  
+
+              
           </div>
     </div>
     <div class="swiper-pagination"></div>

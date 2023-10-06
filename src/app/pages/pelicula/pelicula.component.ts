@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Movie } from 'src/app/interfaces/peliculas.interface';
+import { PeliculasService } from 'src/app/services/peliculas.service';
 
 @Component({
   selector: 'app-pelicula',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class PeliculaComponent {
 
+  movie:Movie[]=[]
+  
+constructor(private peliculasP:PeliculasService){}
+  ngOnInit(): void {
+    this.peliculasP.getPeliculas().subscribe(movies=>{
+      this.movie=movies;
+    })
+  }
 }

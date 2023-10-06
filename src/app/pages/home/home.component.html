@@ -1,24 +1,9 @@
-<h1 style="text-align: center;">{{title}} -- {{name}}</h1>
-<h2>Cartelera</h2>
+<h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">{{title}} ┼┼ {{name}}</h1>
+<h2 style="text-align: center; 
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
+'Lucida Sans', Arial, sans-serif;">CARTELERA</h2>
 <div class="row" *ngIf="movie.length > 0">
     <div class="col">
         <app-slide-show [movies]="movieSlideShow"></app-slide-show>
     </div>
-</div>
-
-<h1 class="mt-10">Estrenos</h1>
-
-<div class="mt-7 col-12" *ngFor="let movie of movie" [ngStyle]="{
-    'background-size':'100%',
-    'background-image':'url(https://image.tmdb.org/t/p/w500'+ movie.backdrop_path+')'
-  }"><!--Url para ver las portadas https://image.tmdb.org/t/p/w500 ---- interfaces/peliculas.interface.ts = Movie(all data)--> 
-
-<div class="proba col-10 col-md-10">
-  <h3>{{movie.title}} </h3>
-  <h5>{{movie.original_title}} </h5>
-  <p>DESCRIPCION : {{movie.overview}}</p>
-  <p>FECHA DE ESTRENO : {{movie.release_date}}</p>
-  <p>POPULARIDAD: {{movie.popularity}}</p>
-  <p>NUMERO DE VOTOS : {{movie.vote_count}} </p>
-</div>  
 </div>
