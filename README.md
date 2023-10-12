@@ -23,6 +23,14 @@ La aplicación nos permitirá mostrar información de un título.
 - Género (Extra)
 - Número de votos (Extra)
 
+## Avance del proyecto
+
+![image](https://github.com/ISAAC12345-WEB/Proyecto-Angular-Web-MoviesDB-/assets/89948658/176aa8f3-60f8-4491-869f-f2c1706f0bac)
+
+![image](https://github.com/ISAAC12345-WEB/Proyecto-Angular-Web-MoviesDB-/assets/89948658/4bccd2bd-e604-4993-a15a-109cb1142879)
+
+![Probando !!](https://github.com/ISAAC12345-WEB/Proyecto-Angular-Web-MoviesDB-/assets/89948658/315cc4b1-a285-470c-9553-159f34bb435e)
+
 ## Servidor de desarrollo
 
 Ejecute `ngserve` para un servidor de desarrollo. Navegue hasta `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos fuente. 
