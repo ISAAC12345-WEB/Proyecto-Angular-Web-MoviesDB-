@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 import { ActivatedRoute } from '@angular/router';
+import { Movie } from 'src/app/interfaces/peliculas.interface';
 
 @Component({
   selector: 'app-detalles-pelicula',

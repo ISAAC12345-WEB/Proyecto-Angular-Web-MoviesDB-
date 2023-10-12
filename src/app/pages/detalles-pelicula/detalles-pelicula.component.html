@@ -1,11 +1,23 @@
-<div *ngIf="peliculaDetalles">
-    <h1>{{ peliculaDetalles.title }}</h1>
-    <img [src]="peliculaDetalles.poster_path" alt="Póster de la película">
-    <!-- Otras propiedades de la película -->
-    <p>DESCRIPCION : {{peliculaDetalles.overview}}</p>
-    <p>FECHA DE ESTRENO : {{peliculaDetalles.release_date}}</p>
-    <p>POPULARIDAD: {{peliculaDetalles.popularity}}</p>
-    <p>NUMERO DE VOTOS : {{peliculaDetalles.vote_count}} </p>
-  </div>
+<h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+  La aplicación nos permitirá mostrar información de un título:
+  - Poster
+  - Título, título original
+  - Fecha de lanzamiento
+  - Overview
+</h2>
 
-<p>detalles-pelicula works!</p>
+    <div *ngIf="peliculaDetalles" [ngStyle]="{
+      'background-size':'cover',
+      'background-image':'url(https://image.tmdb.org/t/p/w500'+ peliculaDetalles.poster_path +')'}">
+      <div class="proba my-2">
+        <img class="custom-image" [src]="'https://image.tmdb.org/t/p/w500' + peliculaDetalles.poster_path" alt="Póster de la película">
+        <h1>{{ peliculaDetalles.title }}</h1>
+        <p>DESCRIPCION : {{peliculaDetalles.overview}}</p>
+        <p>FECHA DE ESTRENO : {{peliculaDetalles.release_date}}</p>
+        <p>POPULARIDAD: {{peliculaDetalles.popularity}}</p>
+        <p>NUMERO DE VOTOS : {{peliculaDetalles.vote_count}}</p>
+      </div>
+    </div>
+    
+  <button class="btn btn-secondary" routerLink="/buscar/:">REGRESAR</button>
+

@@ -1,6 +1,6 @@
 <div class="swiper">
     <div class="swiper-wrapper">
-      <div *ngFor="let movie of movies" class="swiper-slide" [ngStyle]="{
+      <div *ngFor="let movie of movies" class="rounded-bg swiper-slide" [ngStyle]="{
                   'background-size':'cover',
                   'background-image':'url(https://image.tmdb.org/t/p/w500'+ movie.backdrop_path +')'
                 }">
@@ -12,13 +12,10 @@
                 <p>POPULARIDAD: {{movie.popularity}}</p>
                 <p>NUMERO DE VOTOS : {{movie.vote_count}} </p>
                 <button class="btn btn-dark btn-sm" (click)="onMovieClick(movie)">VER TODAS LAS PELICULAS</button>
-              </div>  
-
-              
+              </div> 
           </div>
     </div>
     <div class="swiper-pagination"></div>
-  
     <div class="swiper-button-prev" (click)="onSliderPrev()"></div>
     <div class="swiper-button-next" (click)="onSliderNext()"></div>
 

@@ -13,12 +13,11 @@ import { Router } from '@angular/router';
 export class BuscarComponent implements OnInit{
 
   texto:string = '';
-  movies:Movie[] = [];
+  results:Movie[] = []; //movies
   searchQuery: string='';
-  results: any[]=[]
 
-
-  constructor(private router: Router,private http: HttpClient ,private activatedRoute: ActivatedRoute,private peliculasSvc:PeliculasService){}
+  constructor(private router: Router,private http: HttpClient ,
+    private activatedRoute: ActivatedRoute,private peliculasSvc:PeliculasService){}
   
   ngOnInit(): void {
     
@@ -29,21 +28,17 @@ export class BuscarComponent implements OnInit{
       this.peliculasSvc.buscarPeliculas(this.texto).subscribe(movies=>{
 
         console.log(movies)
-        this.movies=movies;
+        this.results=movies;
       })
-
     })
   }
   buscarTitulos() {
     if (this.searchQuery.trim() === '') {
       return; // Evitar búsquedas vacías
     }
-    const apiKey = '2f9ba10fef143b94cb1bd3792c8f00af';
-    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${this.texto}`;
-  
-    this.http.get(apiUrl).subscribe((data: any) => {
-      this.results = data.results;
-    });
+    this.peliculasSvc.buscarPeliculas(this.searchQuery).subscribe(movies =>{
+      this.results=movies;
+    })
   }
   mostrarDetalles(id: number) {
     this.router.navigate(['/detalles', id]);

@@ -1,6 +1,7 @@
 import { AfterViewInit, Component , Input, OnInit} from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Movie } from 'src/app/interfaces/peliculas.interface';
+import { interval } from 'rxjs';
 import Swiper from 'swiper';
 
 @Component({
@@ -10,8 +11,11 @@ import Swiper from 'swiper';
 })
 export class SlideShowComponent  implements OnInit ,AfterViewInit{
  @Input() movies?:Movie[]; 
-myswiper?:Swiper;
-movie:Movie[]=[];
+  myswiper?:Swiper;
+  movie:Movie[]=[];
+
+  currentIndex = 0; 
+  intervalTime = 2000; // Cambiar de imagen
 
   constructor(private router:Router){}
   ngAfterViewInit(): void {
@@ -20,7 +24,9 @@ movie:Movie[]=[];
     })
   }
   ngOnInit(): void {
-    //console.log(this.movies)
+      interval(this.intervalTime).subscribe(() => {
+      this.onSliderNext(); // Llamar al método que cambia a la siguiente imagen
+    });
   }
   onSliderPrev(){
     this.myswiper?.slidePrev();

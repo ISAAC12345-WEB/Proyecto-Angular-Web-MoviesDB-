@@ -4,3 +4,6 @@
     padding: 5px 3px;
     width: 100%;
   }
+  .rounded-bg {
+    border-radius: 20px; 
+  }

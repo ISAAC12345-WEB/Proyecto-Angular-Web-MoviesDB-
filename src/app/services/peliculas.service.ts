@@ -13,7 +13,6 @@ export class PeliculasService {
   private serverURL:String = 'https://api.themoviedb.org/3';
   private pelisPages = 1;
   cargando: any;
-  getDetallesPelicula: any;
   constructor(private http: HttpClient) { }
 
   get params(){
@@ -25,7 +24,6 @@ export class PeliculasService {
       page : this.pelisPages.toString()
     }
   }
-
   getPeliculas():Observable<Movie[]>{
 
     return this.http.get<PopularResponse>(`${this.serverURL}/movie/now_playing`,{params:this.params}).pipe(
@@ -33,14 +31,17 @@ export class PeliculasService {
         this.pelisPages+=1
       ))
     );
-
   }
   buscarPeliculas(texto:string):Observable<Movie[]>{
 
   const params = {...this.params ,query:texto};
-  return this.http.get<PopularResponse>(`${this.serverURL}/search/movie`,{
-    params
-  }).pipe(map(res=>res.results))
+  return this.http.get<PopularResponse>(`${this.serverURL}/search/movie`,
+  {params}).pipe(map((res)=>res.results))
   }
   //https://api.themoviedb.org/3/search/movie/now_playing?lenguage=es-ES
+
+  getDetallesPelicula(movieId: number): Observable<Movie> {
+    return this.http.get<Movie>(`${this.serverURL}/movie/${movieId}`, { params: this.params });
+
+  }
 }

@@ -6,29 +6,24 @@
   <button class="btn btn-secondary" routerLink="/home">REGRESAR</button>
 
   <div class="container">
-      <div class="search-results">
-        <ul>
-          <h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-            La aplicación nos permitirá mostrar información de un título:
-            - Poster
-            - Título, título original
-            - Fecha de lanzamiento
-            - Overview
-          </h2>
-
-          <li *ngFor="let pelicula of results" [ngStyle]="{
-            'background-size':'cover',
-            'background-image':'url(https://image.tmdb.org/t/p/w500'+ pelicula.poster_path +')'}">
+  <h2>RESULTADOS DE LA BUSQUEDA</h2>
+    <div class="row">
+      <div class="col-md-6 " *ngFor="let pelicula of results">
+            <div class="search-result mb-4 col-my-3">
             
-            <div class="proba pelicula-card">
+              <img class="custom-image" class="custom-image" [src]="'https://image.tmdb.org/t/p/w500' + pelicula.poster_path" alt="Póster de la película">
+              <div class="mb-25 proba pelicula-card">
+                  <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">{{ pelicula.title }}</h1>
+                  <p style="font-size: 140%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">TÍTULO ORIGINAL : {{ pelicula.original_title }}</p>
+                  <p style="font-size: 130%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">FECHA DE LANZAMIENTO :  {{ pelicula.release_date }}</p>
+                  <p style="font-size: 140%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">OVERVIEW :  {{ pelicula.overview }}</p>
               
-              <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">{{ pelicula.title }}</h1>
-              <p style="font-size: 140%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">TITULO ORIGINAL : {{ pelicula.original_title }}</p>
-              <p style="font-size: 130%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">FECHA DE LANZAMIENTO :  {{ pelicula.release_date }}</p>
-              <p style="font-size: 140%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">OVERVIEW :  {{ pelicula.overview }}</p>
+              </div>
             </div>
-          </li>
-        </ul>
+          <ul>
+            <button class="btn btn-info btn-sm" (click)="mostrarDetalles(pelicula.id)">INFORMACIÓN</button>
+          </ul>
       </div>
     </div>
+  </div>
 </div>

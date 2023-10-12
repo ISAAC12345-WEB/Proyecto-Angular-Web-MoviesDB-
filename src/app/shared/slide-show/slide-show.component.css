@@ -14,3 +14,6 @@
     position: absolute;
     width: 100%;
   }
+  .rounded-bg {
+    border-radius: 35px; 
+  }
