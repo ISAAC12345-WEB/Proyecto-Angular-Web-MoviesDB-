@@ -42,6 +42,13 @@ export class PeliculasService {
 
   getDetallesPelicula(movieId: number): Observable<Movie> {
     return this.http.get<Movie>(`${this.serverURL}/movie/${movieId}`, { params: this.params });
-
   }
+  //listar 10 pelis populares
+  getPeliculasPopulares(): Observable<Movie[]> {
+    const params = { ...this.params, sort_by: 'popularity.desc' }; // Ordenar por popularidad de forma descendente
+  
+    return this.http.get<PopularResponse>(`${this.serverURL}/movie/popular`, { params })
+      .pipe(map((res) => res.results.slice(0, 10))); // Obtener solo las primeras 10 películas populares
+  }
+  
 }

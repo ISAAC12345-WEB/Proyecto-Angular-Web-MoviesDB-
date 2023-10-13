@@ -16,5 +16,11 @@ constructor(private peliculasP:PeliculasService){}
     this.peliculasP.getPeliculas().subscribe(movies=>{
       this.movie=movies;
     })
+    this.loadPeliculasPopulares();
+  }
+  loadPeliculasPopulares() {
+    this.peliculasP.getPeliculasPopulares().subscribe((movies) => {
+      this.movie = movies;
+    });
   }
 }

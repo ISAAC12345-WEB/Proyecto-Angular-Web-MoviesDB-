@@ -10,7 +10,9 @@ import { PeliculasService } from 'src/app/services/peliculas.service';
 export class HomeComponent implements OnInit{
 
   title = 'Movie DB';
-  name = 'Isaac Valqui';
+  name = 'API - Angular';
+  currentYear = '2023';
+  authorName = 'Isaac Valqui Ldg';
 
   movie:Movie[]=[]
   movieSlideShow:Movie[]=[]

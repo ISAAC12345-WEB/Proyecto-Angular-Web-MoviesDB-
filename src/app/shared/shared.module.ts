@@ -4,18 +4,20 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
     SlideShowComponent,
+    FooterComponent,
     
   ],
   exports:[
    NavbarComponent,
    SlideShowComponent,
-   
+   FooterComponent
   ],
 
   imports: [

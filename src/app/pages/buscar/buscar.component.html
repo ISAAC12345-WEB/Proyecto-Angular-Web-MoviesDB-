@@ -1,29 +1,28 @@
 <div class="search-container">
-  <h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-    Buscar y mostrar títulos con los siguientes criterios -> Título</h2>
-  <input type="text" placeholder="Buscar por título" [(ngModel)]="searchQuery">
-  <button class="btn btn-primary my-2 my-sm-0" (click)="buscarTitulos()">BUSCAR PELICULA</button>
-  <button class="btn btn-secondary" routerLink="/home">REGRESAR</button>
+  <h2 class="search-title">Buscar y mostrar títulos con los siguientes criterios -> Título</h2>
+  <input class="search-input" type="text" placeholder="Buscar por título" [(ngModel)]="searchQuery">
+  <button class="btn btn-primary my-2 my-sm-0 search-button" (click)="buscarTitulos()">BUSCAR PELÍCULA</button>
+  <button class="btn btn-secondary search-button" routerLink="/home">REGRESAR</button>
 
-  <div class="container">
-  <h2>RESULTADOS DE LA BUSQUEDA</h2>
+  <div class="container results-container">
+    <h2 class="results-title">RESULTADOS DE LA BÚSQUEDA</h2>
     <div class="row">
-      <div class="col-md-6 " *ngFor="let pelicula of results">
-            <div class="search-result mb-4 col-my-3">
-            
-              <img class="custom-image" class="custom-image" [src]="'https://image.tmdb.org/t/p/w500' + pelicula.poster_path" alt="Póster de la película">
-              <div class="mb-25 proba pelicula-card">
-                  <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">{{ pelicula.title }}</h1>
-                  <p style="font-size: 140%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">TÍTULO ORIGINAL : {{ pelicula.original_title }}</p>
-                  <p style="font-size: 130%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">FECHA DE LANZAMIENTO :  {{ pelicula.release_date }}</p>
-                  <p style="font-size: 140%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">OVERVIEW :  {{ pelicula.overview }}</p>
-              
-              </div>
-            </div>
-          <ul>
-            <button class="btn btn-info btn-sm" (click)="mostrarDetalles(pelicula.id)">INFORMACIÓN</button>
-          </ul>
+      <div class="col-md-4" *ngFor="let pelicula of results">
+        <div class="card result-card">
+          <img class="result-image" [src]="'https://image.tmdb.org/t/p/w500' + pelicula.poster_path" alt="Póster de la película">
+          <div class="card-body result-content">
+            <h5 class="card-title" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">{{ pelicula.title }}</h5>
+            <p class="card-text">TÍTULO ORIGINAL: {{ pelicula.original_title }}</p>
+            <p class="card-text">FECHA DE LANZAMIENTO: {{ pelicula.release_date }}</p>
+            <p class="card-text">OVERVIEW: {{ pelicula.overview }}</p>
+          </div>
+        </div>
+        <ul>
+          <button class="btn btn-info btn-sm" (click)="mostrarDetalles(pelicula.id)">INFORMACIÓN</button>
+        </ul>
       </div>
     </div>
   </div>
 </div>
+
+<app-footer></app-footer>

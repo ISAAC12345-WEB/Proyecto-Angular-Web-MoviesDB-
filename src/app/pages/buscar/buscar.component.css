@@ -1,7 +1,39 @@
-.proba{
-    background-color: rgba(0, 0, 0, 0.3);
-}
+
 .custom-image {
-    width: 410px;
+    width: 310px;
     height: 450px; 
+  }
+.search-container {
+    text-align: center;
+  }
+  .search-input {
+    margin: 10px;
+  }
+  .search-button {
+    margin: 10px;
+  }
+  .results-container {
+    text-align: center;
+  }
+  .results-title {
+    font-size: 1.5rem;
+  }
+  .result-card {
+    display: inline-block;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  .result-image {
+    max-width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .result-content {
+    padding: 10px;
+    text-align: left;
+  }
+  .info-button {
+    margin: 10px;
   }
