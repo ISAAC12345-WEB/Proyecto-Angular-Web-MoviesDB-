@@ -5,3 +5,10 @@
     width: 300px; /* Ancho personalizado */
     height: 450px; /* Alto personalizado */
   }
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    margin-right: 20px; 
+  }

@@ -1,3 +1,11 @@
+<div class="d-flex justify-content-end">
+  <div class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" #txtBuscar
+      (keyup.enter)="buscarPelicula(txtBuscar.value)" type="search" placeholder="Escriba aquí..." aria-label="Search">
+    <button (click)="buscarPelicula(txtBuscar.value)" class="btn btn-success" type="button">MOSTRAR</button>
+  </div>
+</div>
+
 <div class="swiper">
     <div class="swiper-wrapper">
       <div *ngFor="let movie of movies" class="rounded-bg swiper-slide" [ngStyle]="{
@@ -11,7 +19,7 @@
                 <p>FECHA DE ESTRENO : {{movie.release_date}}</p>
                 <p>POPULARIDAD: {{movie.popularity}}</p>
                 <p>NUMERO DE VOTOS : {{movie.vote_count}} </p>
-                <button class="btn btn-dark btn-sm search-button" (click)="onMovieClick(movie)">VER LAS 10 PELICULAS MAS POPULARES</button>
+                <button class="btn btn-dark btn-sm search-button ml-2" (click)="onMovieClick(movie)">VER 10 PELÍCULAS MAS POPULARES | INFORMACIÓN</button>
               </div> 
           </div>
     </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Movie } from 'src/app/interfaces/peliculas.interface';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 
@@ -9,18 +10,21 @@ import { PeliculasService } from 'src/app/services/peliculas.service';
 })
 export class PeliculaComponent {
 
-  movie:Movie[]=[]
+  popularMovies:Movie[]=[]
   
-constructor(private peliculasP:PeliculasService){}
+constructor(private peliculasP:PeliculasService, private router: Router){}
   ngOnInit(): void {
     this.peliculasP.getPeliculas().subscribe(movies=>{
-      this.movie=movies;
+      this.popularMovies=movies;
     })
     this.loadPeliculasPopulares();
   }
   loadPeliculasPopulares() {
     this.peliculasP.getPeliculasPopulares().subscribe((movies) => {
-      this.movie = movies;
+      this.popularMovies = movies;
     });
+  }
+  mostrarDetalles(id: number) {
+    this.router.navigate(['/detalles', id]);
   }
 }

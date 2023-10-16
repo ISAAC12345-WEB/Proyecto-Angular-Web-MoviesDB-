@@ -12,12 +12,15 @@
       <div class="proba my-2">
         <img class="custom-image" [src]="'https://image.tmdb.org/t/p/w500' + peliculaDetalles.poster_path" alt="Póster de la película">
         <h1>{{ peliculaDetalles.title }}</h1>
-        <p>DESCRIPCION : {{peliculaDetalles.overview}}</p>
         <p>FECHA DE ESTRENO : {{peliculaDetalles.release_date}}</p>
+        <p>DESCRIPCION : {{peliculaDetalles.overview}}</p>
         <p>POPULARIDAD: {{peliculaDetalles.popularity}}</p>
         <p>NUMERO DE VOTOS : {{peliculaDetalles.vote_count}}</p>
       </div>
     </div>
-    
-  <button class="btn btn-secondary" routerLink="/buscar/:">REGRESAR</button>
+    <div class="button-container">
+      <button class="btn btn-secondary" routerLink="/buscar/:">Regresar y Buscar</button>
+      <button class="btn btn-warning" routerLink="/home">Página principal</button>
+      <button class="btn btn-success" routerLink="/pelicula/:">Ver películas Populares</button>
+    </div>
 

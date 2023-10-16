@@ -13,13 +13,13 @@ export class NavbarComponent implements OnInit{
   ngOnInit(): void {
         
   }
-  buscarPelicula(texto:string){
+  /*buscarPelicula(texto:string){
     //console.log(texto)
     texto=texto.trim(); 
     if(texto.length === 0){
       return;
     }
     this.router.navigate(['/buscar',texto])
-  }
+  }*/
 
 }

@@ -37,4 +37,13 @@ export class SlideShowComponent  implements OnInit ,AfterViewInit{
   onMovieClick(movie:Movie){
     this.router.navigate(['/pelicula',movie.id])
   } 
+  buscarPelicula(texto:string){
+    //console.log(texto)
+    texto=texto.trim(); 
+    if(texto.length === 0){
+      return;
+    }
+    this.router.navigate(['/buscar',texto])
+  }
+
 }

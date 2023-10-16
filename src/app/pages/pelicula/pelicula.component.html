@@ -3,7 +3,7 @@
 <div class="container">
     <h1 class="my-4">Películas Populares</h1>
     <div class="row">
-      <div class="col-md-4" *ngFor="let pelicula of movie">
+      <div class="col-md-4" *ngFor="let pelicula of popularMovies">
         <div class="card mb-4">
           <img class="card-img-top" [src]="'https://image.tmdb.org/t/p/w500' + pelicula.poster_path" alt="Póster de la película">
           <div class="card-body">
@@ -12,6 +12,7 @@
             <p class="card-text">Fecha de lanzamiento: {{ pelicula.release_date }}</p>
             <p class="card-text">Popularidad: {{ pelicula.popularity }}</p>
             <p class="card-text">Número de votos: {{ pelicula.vote_count }}</p>
+            <button class="btn btn-info btn-sm" (click)="mostrarDetalles(pelicula.id)">INFORMACIÓN</button>
           </div>
         </div>
       </div>
